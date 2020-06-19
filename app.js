@@ -2,7 +2,7 @@ const express = require("express");
 const bodyparser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
-const encrypt = require("mongoose-encryption");
+const md5 = require("md5");
 const app = express();
 
 app.use(express.static(__dirname + "/public"));
@@ -21,8 +21,6 @@ const userSchema = new mongoose.Schema({
   password: String
 });
 
-const secret = "ThisisourSECRET!"
-userSchema.plugin(encrypt,{secret:secret,encryptedFields: ['password']});
 
 const User = new mongoose.model("User", userSchema);
 
@@ -40,7 +38,7 @@ app.get("/login", function(req, res) {
 
 app.post("/register", function(req, res) {
   const newEmail = req.body.username;
-  const newPassword = req.body.password;
+  const newPassword = md5(req.body.password);
 
   User.findOne({
     email: newEmail
@@ -68,7 +66,7 @@ app.post("/register", function(req, res) {
 
 app.post("/login", function(req, res) {
   const email = req.body.username;
-  const password = req.body.password;
+  const password = md5(req.body.password);
 
   User.findOne({
     email: email
