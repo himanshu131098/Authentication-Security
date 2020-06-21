@@ -14,4 +14,12 @@ Commit Key : 9de5dce4c810512e4afe58a142a7748d6ef8bee2
 ## Level-3 
 ### Hashing
 To encrypt we are using a string named secret. If someone gets it, the password will be decrypted. So to avoid that we use Hashing. A MD5 hash is been use to hash the password and store it.  
-Commit Key : 936c12ca72a2034bfe6aa4fc033c662ee1606f1e  
+Commit Key : 936c12ca72a2034bfe6aa4fc033c662ee1606f1e 
+
+## Level-4  
+### Salting & Bcrypt  
+In order to make a hash more secure a random seuence of characters is added in the end called as the salt. To enhnace the security multiple time this process is done which is referred as salt rounds. Also, MD5 hash function is little easy to decrypt so we use Bcrypt. A computer with highest GPU can only generate 17000 Hash/sec of Bcrypt function.  
+Commit Key : 559c8ad9bd3d26a35a53fcefd37c4e25050bc418
+
+
+
