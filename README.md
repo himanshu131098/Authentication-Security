@@ -19,7 +19,12 @@ Commit Key : 936c12ca72a2034bfe6aa4fc033c662ee1606f1e
 ## Level-4  
 ### Salting & Bcrypt  
 In order to make a hash more secure a random seuence of characters is added in the end called as the salt. To enhnace the security multiple time this process is done which is referred as salt rounds. Also, MD5 hash function is little easy to decrypt so we use Bcrypt. A computer with highest GPU can only generate 17000 Hash/sec of Bcrypt function.  
-Commit Key : 559c8ad9bd3d26a35a53fcefd37c4e25050bc418
+Commit Key : 559c8ad9bd3d26a35a53fcefd37c4e25050bc418  
+
+## Level-5  
+### Cookies & Sessions using Passport JS  
+It very crucial that the users are authenticated using a proper method and also once logged in the user are able to view the webpage until unless they close logout ( if tabs are closed accidently the data should be retained). To do this we use the Passport JS with other packages like sessions, passport-local-mongoose.  
+Commit Key : b21c711eeb2621c1c8afb696d242b3bd38304fe7  
 
 
 
