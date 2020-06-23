@@ -26,5 +26,11 @@ Commit Key : 559c8ad9bd3d26a35a53fcefd37c4e25050bc418
 It very crucial that the users are authenticated using a proper method and also once logged in the user are able to view the webpage until unless they close logout ( if tabs are closed accidently the data should be retained). To do this we use the Passport JS with other packages like sessions, passport-local-mongoose.  
 Commit Key : b21c711eeb2621c1c8afb696d242b3bd38304fe7  
 
+## Level-6
+### OAuth  
+It always better to for low-tech companies to delegate the password saving business to a giant in the field.That's what OAuth does! Sign In with Google or Facebook- these are services by OAuth.  
+Commit Key : 0482402fb66a9f81626eb92ffdc2b1a45cbc04ef
 
+
+So, this is it. All the levels of authentication & security have been implemented.
 
